@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: EMPTY_SUBPAGE
+---
+
+<!-- Page Title
+============================================= -->
+<section id="page-title" class="page-title-mini">
+
+  <div class="container clearfix">
+    <h1>{{ title }}</h1>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+    </ol>
+  </div>
+
+</section><!-- #page-title end -->
+
+{{ content | safe }}
