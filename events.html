@@ -111,79 +111,25 @@
 
 		</section><!-- #page-title end -->
 
-
-
 		<!-- Content
 		============================================= -->
 		<section id="content">
-
 			<div class="content-wrap">
-
 				<div class="container">
 
 					<div class="heading-block text-center border-bottom-0">
-
-					<div style = "display:flex">
-
-						<div id = "event-div1">
-
-
-							<span style="line-height: normal;font-weight: 1000">Python Turtle Course Sign Up</span>
-							<!-- <span id = "positionPython" style = "background-color:green;color: red;float:right">4/4 </span>-->
-							</br>
-							</br>
-							<p style="line-height: normal;  font-weight: 1000;"> Time: 2-3pm on Sunday</p>
-							<p style="line-height: 0.5;font-weight: 1000"> Position: 920 Roosevelt</p>
-
-
-							<label> Are you in Special need </label>
-							<select id = "input2">
-								<option>Yes</option>
-								<option>No</option>
-							</select>
-
-							</br></br>
-
-							<label> Grade: </label>	<input id = "input3"></input>
-
-							</br></br>
-
-							<label> Name: </label> <input id = "input4"></input>
-
-							</br></br>
-
-							<label> Email/Phone: </label> <input id = "input5"></input>
-
-							</br></br>
-
-							<button onclick = "formValueCheck('PythonTurtle')"> submit form </button>
-							<br>
-
-
-						</div>
-
-
-
-
-
-					</div>
-
-
-
+						<h1>Coming Soon!</h1>
+						<span>Please check back again at a later time.</span>
 					</div>
 
 				</div>
 			</div>
 		</section><!-- #content end -->
 
-
-
-
 		<!-- Footer
 		============================================= -->
 		<footer id="footer" class="dark">
 			<div class="container">
-
 
 				<!-- Footer Widgets
 				============================================= -->
@@ -204,7 +150,6 @@
 
 						<div class="col-lg-8">
 							<h3>Contact Us!</h3>
-
 
 							<div class="form-widget" data-alert-type="inline">
 								<form id="contactform" name="contactform" class="row" action="include/contact_form.php" method="post">
@@ -251,9 +196,6 @@
 
 			</div>
 
-
-
-
 			<!-- Copyrights
 			============================================= -->
 			<div id="copyrights">
@@ -288,70 +230,5 @@
 
 	<script src="form_submission_react.js"></script>
 
-
-
-
-
-
 </body>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app-check.js"></script>
-<script>
-var firebaseConfig = {
-apiKey: "AIzaSyBVy-WM-B9rD4Xy1yJyQkcCgnQgLnhQaO4",
-authDomain: "coder-s-cafe-registration.firebaseapp.com",
-databaseURL: "https://coder-s-cafe-registration-default-rtdb.firebaseio.com",
-projectId: "coder-s-cafe-registration",
-storageBucket: "coder-s-cafe-registration.appspot.com",
-messagingSenderId: "737125702925",
-appId: "1:737125702925:web:6c8b925fd90201d2e26444",
-measurementId: "G-LWFS0BRQNQ"
-  };
-    // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-const appCheck = firebase.appCheck();
-appCheck.activate(
-  	'6LeMwvgeAAAAAJ4tKouc5nDbVBBNsR8O6839eIiH',
-  true);
-
-		var i = 0
-	  firebase.database().ref("/").once('value').then(function(a){
-	    a.forEach(function(snapshot){
-	      console.log(snapshot.key)
-	      if (snapshot.key == "PythonTurtle"){
-	        i+=1
-	      }
-
-
-	    })
-			if (i >= 4){
-	    document.getElementById("event-div1").style = "display:none"
-		}
-	  })
-</script>
-<script>
-
-function formValueCheck(classes){
-  specialNeed = document.getElementById("input2").selectedIndex
-  grade = document.getElementById("input3").value
-  name = document.getElementById("input4").value
-	contact = document.getElementById("input5").value
-  firebase.database().ref(classes+" "+new Date().getTime()+'/').set({
-      name: name,
-      grade: grade,
-      specialNeed: specialNeed
-			contact: contact
-    })
-}
-</script>
-
-<script>
-document.getElementById("event-div1").style = "margin:3%;padding:2%;background-color: #ccaa8d; border-radius: 10px; width: 30%;  box-shadow: 10px 10px #888888;"
-document.getElementById("event-div2").style = "margin:3%;padding:2%;background-color: #ccaa8d; border-radius: 10px; width: 30%;  box-shadow: 10px 10px #888888;"
-
-</script>
-
-
 </html>
