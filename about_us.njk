@@ -1,0 +1,159 @@
+---
+layout: subpage.njk
+title: About Us
+---
+<section id="content">
+	<div class="content-wrap">
+
+		<div class="container clearfix">
+
+			<div class="heading-block center">
+				<h1>Who are we?</br></br></h1>
+
+				<span>We are an organization to help everyone from special needs to underrepresented communities who is interested in Computer Science, so to further develop their passion Computer Science, and also to use Computer Science to help their societal and life-related problems.</span>
+			</div>
+
+			<div id="portfolio" class="portfolio row g-0 portfolio-reveal grid-container">
+
+				<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
+					<div class="grid-inner">
+						<div class="portfolio-image">
+							<a href="portfolio-single.html">
+								<img src="assets/current_activities/_base0.png" alt="Empty">
+							</a>
+						</div>
+						<div class="portfolio-desc">
+							<h3><a href="#">--</a></h3>
+							<span>--</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-illustrations">
+					<div class="grid-inner">
+						<div class="portfolio-image">
+							<a href="portfolio-single.html">
+								<img src="assets/current_activities/_base2.png" alt="Photo">
+							</a>
+						</div>
+						<div class="portfolio-desc">
+							<h3><a href="portfolio-single.html">Pilot Program 0</a></h3>
+							<span>Educational Activity</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements">
+					<div class="grid-inner">
+						<div class="portfolio-image">
+							<a href="#">
+								<img src="assets/current_activities/pil_prg_1_ended.jpg" alt="Photo">
+							</a>
+						</div>
+						<div class="portfolio-desc">
+							<h3><a href="portfolio-single-video.html">Pilot Program 1</a></h3>
+							<span>Educational Activity</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
+					<div class="grid-inner">
+						<div class="portfolio-image">
+							<a href="portfolio-single.html">
+								<img src="assets/current_activities/_base3.png" alt="Empty">
+							</a>
+						</div>
+						<div class="portfolio-desc">
+							<h3><a href="#">--</a></h3>
+							<span>--</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
+					<div class="grid-inner">
+						<div class="portfolio-image">
+							<a href="portfolio-single.html">
+								<img src="assets/current_activities/_base1.png" alt="Empty">
+							</a>
+						</div>
+						<div class="portfolio-desc">
+							<h3><a href="#">--</a></h3>
+							<span>--</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
+					<div class="grid-inner">
+						<div class="portfolio-image">
+							<a href="portfolio-single.html">
+								<img src="assets/current_activities/pilot_program_2_team_photo.jpg" alt="Empty">
+							</a>
+						</div>
+						<div class="portfolio-desc">
+							<h3><a href="#">Pilot Program 2</a></h3>
+							<span>Educational Activity</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
+					<div class="grid-inner">
+						<div class="portfolio-image">
+							<a href="portfolio-single.html">
+								<img src="assets/current_activities/_base0.png" alt="Empty">
+							</a>
+						</div>
+						<div class="portfolio-desc">
+							<h3><a href="#">--</a></h3>
+							<span>--</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
+					<div class="grid-inner">
+						<div class="portfolio-image">
+							<a href="portfolio-single.html">
+								<img src="assets/current_activities/_base2.png" alt="Empty">
+							</a>
+						</div>
+						<div class="portfolio-desc">
+							<h3><a href="#">Pilot Program 4</a></h3>
+							<span>Developmental Activity</span>
+						</div>
+					</div>
+				</article>
+
+			</div>
+		</div>
+
+		<div class="section center">
+			<h1>Meet the board members...</br></br></h1>
+
+			{% for member in collections.member %}
+
+			<div class="row col-mb-50 mb-0">
+				<div class="col-lg align-items-center">
+					<div class="team team-list row align-items-center justify-content-center">
+						<div class="team-image col-sm-2">
+							<img src="{{member.data.photo}}" alt="{{member.data.name}}">
+						</div>
+						<div class="team-desc col-sm-5">
+							<div class="team-title"><h4>{{member.data.name}}</h4><span>{{member.data.title}}</span></div>
+							<div class="team-content">
+								<p> {{member.templateContent | safe}} </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</br></br></br>
+
+			{% endfor %}
+		</div>
+
+	</div>
+</section><!-- #content end -->
