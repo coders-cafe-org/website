@@ -1,5 +1,6 @@
 ---
 title: EMPTY_BASE
+header_main: false
 ---
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
@@ -38,9 +39,17 @@ title: EMPTY_BASE
 
 		<!-- Header
 		============================================= -->
+
+
+		{% if header_main %}
 		<header id="header" class="full-header transparent-header" data-sticky-class="dark" data-sticky-offset="200">
 			<div id="header-wrap">
 				<div class="container dark">
+		{% else %}
+		<header id="header" class="full-header transparent-header" data-sticky-class="not-dark">
+			<div id="header-wrap">
+				<div class="container">
+		{% endif %}
 					<div class="header-row">
 
 						<!-- Logo
