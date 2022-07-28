@@ -146,104 +146,24 @@ header_main: true
 				</div>
 
 				<div id="oc-portfolio" class="owl-carousel portfolio-carousel carousel-widget" data-margin="1" data-pagi="false" data-items-xs="1" data-items-sm="2" data-items-md="3" data-items-xl="4">
-					
+
+					{# _data/currentActivities.json #}
+					{% for activity in currentActivities %}
 
 					<div class="portfolio-item">
 						<div class="portfolio-image">
-							<a href="#">
-								<img src="assets/current_activities/pilot_program_4.png" alt="Image">
-							</a>
-							<div class="bg-overlay" data-lightbox="gallery">
-								<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-									<a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-								</div>
-								<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-							</div>
+							<img src="{{ activity.photo | safe }}" alt="{{ activity.title | safe }}">
 						</div>
 						<div class="portfolio-desc">
-							<h3><a href="#">Programming and Teamwork</a></h3>
-							<p>10/28/2021</p>
-							<span>Starting our first developmental activity, Pilot Program 4, we are hoping this program will enable programmers to learn a project-oriented and colloborative environment to develop an end-user product for the community.</span>
+							<h3>{{ activity.title | safe }}</h3>
+							<p>{{ activity.date | safe }}</p>
+							<span>{{ activity.blurb | safe }}</span>
 						</div>
 					</div>
 
-					<div class="portfolio-item">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="/assets/current_activities/pilot_program_2.png" alt="Image">
-							</a>
-							<div class="bg-overlay" data-lightbox="gallery">
-								<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-									<a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-								</div>
-								<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-							</div>
-						</div>
-						<div class="portfolio-desc">
-							<h3><a href="#">Scratch & Python Turtle!</a></h3>
-							<p>9/12/2021</p>
-							<span>With the initation of Pilot Program 2, we are currently able to enlarge our capacity to help more neurodivergent kids. Looking forward to help more of the community!</span>
-						</div>
-					</div>
+					{% endfor %}
 
-					<div class="portfolio-item">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="/assets/current_activities/pil_prg_1_ended.jpg" alt="Kids learning Scratch">
-							</a>
-							<div class="bg-overlay" data-lightbox="gallery">
-								<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-									<a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-								</div>
-								<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-							</div>
-						</div>
-						<div class="portfolio-desc">
-							<h3><a href="#">Pilot Program 1 Ended</a></h3>
-							<p>8/29/2021</p>
-							<span>The special-need kids learnt quite a bit from this 8 week journey of fun and hands-on learning on base concept of computer science! We were also astonished to see a lot of members are also interested to help out!</span>
-						</div>
-					</div>
-
-					<div class="portfolio-item">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="/assets/current_activities/_base3.png" alt="Image">
-							</a>
-							<div class="bg-overlay" data-lightbox="gallery">
-								<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-									<a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-								</div>
-								<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-							</div>
-						</div>
-						<div class="portfolio-desc">
-							<h3><a href="#">Pilot Program 0 Ended</a></h3>
-							<p>7/22/2021</p>
-							<span>Our very first program ended with a sense of wonder! I thank our member Eric X. and William M. for helping out early on!</span>
-						</div>
-					</div>
-
-					<div class="portfolio-item">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="/assets/current_activities/_base1.png" alt="Image">
-							</a>
-							<div class="bg-overlay" data-lightbox="gallery">
-								<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-									<a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-								</div>
-								<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-							</div>
-						</div>
-						<div class="portfolio-desc">
-							<h3><a href="#">Pilot Program 1 Initiated!</a></h3>
-							<p>7/11/2021</p>
-							<span>This program expands a little bit more on topics that include Scratch and Minecraft Makecode!</span>
-						</div>
-					</div>
-
-					<div class="portfolio-item">
+					{# <div class="portfolio-item">
 						<div class="portfolio-image">
 							<a href="#">
 								<img src="/assets/current_activities/_base0.png" alt="Image">
@@ -260,26 +180,7 @@ header_main: true
 							<p>7/3/2021</p>
 							<span>This organization was founded on July 3, 2020!</span>
 						</div>
-					</div>
-
-					<div class="portfolio-item">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="/assets/current_activities/_base2.png" alt="Image">
-							</a>
-							<div class="bg-overlay" data-lightbox="gallery">
-								<div class="bg-overlay-content dark" data-hover-animate="fadeIn">
-									<a href="#" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
-								</div>
-								<div class="bg-overlay-bg dark" data-hover-animate="fadeIn"></div>
-							</div>
-						</div>
-						<div class="portfolio-desc">
-							<h3><a href="#">Pilot Program 0</a></h3>
-							<p>6/15/2021</p>
-							<span>This is a program for all of our board members to learn, tryout, and prepare before we go out and help the community!</span>
-						</div>
-					</div>
+					</div> #}
 
 				</div>
 
