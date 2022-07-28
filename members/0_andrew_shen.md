@@ -7,4 +7,9 @@ title: President & CEO, Co-founder
 photo: /assets/members/andrew_shen.jpg
 date: 2020-01-01
 ---
-Programming procedural graphics have always been my fascination, especially when I get a glimpse of how such a complicated graphics pipeline interacts with other parts of systems flawlessly to produce a single pixel on your screen. I have played the trumpet and still really loved it. I also have done a few programming projects spanning multiple months, one of them being a simple Minecraft clone. I started programming in 3rd grade in which throughout my years programming, I have always wondered how to expose interesting, unique, and niche Computer Science topics hidden behind the curtain of endless programming tutorials to everyone. Github
+Hello! Currently a high schooler, I enjoy programming in my free times from procedural 3D graphics to machine learning model designing.
+Since third grade, I have always loved computer science, not just programming in itself, but also its deeper intrinsic connection with math
+and its impact with the world. And now, I want to share my learning experience with kids in our community.
+Going out and hiking is also one of my hobby, exploring the world in many different ways.
+I also enjoys playing trumpet, and hoping one day I can learn to play French horn.
+Big fan of Rustlang!
