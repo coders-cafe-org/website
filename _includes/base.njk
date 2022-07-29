@@ -133,9 +133,13 @@ header_main: false
 						<div class="col-lg-8">
 							<h3>Contact Us!</h3>
 
-							<div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
-								<strong>Success!</strong> This form has been submitted.
-								<button id="alertButton" type="button" class="btn-close" aria-label="Close"></button>
+							<div id="alert-info" class="alert alert-info alert-dismissible fade show" role="alert" style="display: none">
+								<strong>Success!</strong> This form has been submitted. Please double check your email containing your response so we are certain we also got your response.
+								<button id="alert-button-info" type="button" class="btn-close" aria-label="Close"></button>
+							</div>
+							<div id="alert-error" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none">
+								<strong>Error:</strong> Please make sure you have enter your name and your message with a valid email.
+								<button id="alert-button-error" type="button" class="btn-close" aria-label="Close"></button>
 							</div>
 
 							<div class="form-widget" data-alert-type="inline">
@@ -144,26 +148,22 @@ header_main: false
 
 									<div class="col-6 form-group">
 										<label for="contactform-name">Name:</label>
-										<input type="text" id="contactform-name" name="name" value="" class="form-control" />
+										<input type="text" id="contact-name" name="name" value="" class="form-control" />
 									</div>
 
 									<div class="col-6 form-group">
 										<label for="contactform-email">Email Address:</label>
-										<input type="text" id="contactform-email" name="email" value="" class="form-control" placeholder="name@example.com" />
+										<input type="text" id="contact-email" name="email" value="" class="form-control" placeholder="name@example.com" />
 									</div>
 
 									<div class="w-100"></div>
 
 									<div class="col form-group">
 										<label for="contactform-message">Message:</label>
-										<textarea id="contactform-message" name="message" value="" class="form-control"></textarea>
+										<textarea id="contact-message" name="message" value="" class="form-control"></textarea>
 									</div>
 
 									<div class="w-100"></div>
-
-									<div class="col-12 form-group d-none">
-										<input type="text" id="contactform-botcheck" name="contactform-botcheck" value="" class="sm-form-control" />
-									</div>
 
 									<div class="col-12 form-group">
 										<button class="btn" style="background-color: lightgray" id="contactform-submit" name="contactform-submit" value="contact">Submit</button>
@@ -187,7 +187,7 @@ header_main: false
 						<div class="center">
 							<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /> </a> <br>
 
-							Copyright &copy; 2021 Coder's Caf&eacute;. All Rights Reserved.<br>
+							Copyright &copy; 2021 Coder's Caf&eacute; Inc. All Rights Reserved.<br>
 						</div>
 				</div>
 			</div><!-- #copyrights end -->
@@ -210,15 +210,32 @@ header_main: false
 	<script src="/js/functions.js"></script>
 
 	<script>
-	$("#alert").hide();
+	// $("#alert").hide();
 
   $('#contactform').submit(function(e) {
-		$("#alert").show();
+		const email_regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+		const email = $('#contact-email').val();
+
+		if(
+			$('#contact-name').val() !== "" &&
+			email_regex.test(email) &&
+			$('#contact-message').val() !== ""
+		) {
+			$("#alert-info").show();
+		} else {
+			$("#alert-error").show();
+			e.preventDefault();
+		}
   });
 
-	$('#alertButton').click(function(e) {
-		$("#alert").fadeOut(300);
+	$('#alert-button-info').click(function(e) {
+		$("#alert-info").fadeOut(300);
   });
+
+	$('#alert-button-error').click(function(e) {
+		$("#alert-error").fadeOut(300);
+  });
+
   </script>
 
 </body>
